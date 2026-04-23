@@ -1,5 +1,5 @@
 import axios from 'axios';
-const api = axios.create({ baseURL: 'https://lost-found-efcd.onrender.com' }); // Change to Render URL later
+const api = axios.create({ baseURL: 'https://lost-found-efcd.onrender.com/api' }); // Change to Render URL later
 
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
