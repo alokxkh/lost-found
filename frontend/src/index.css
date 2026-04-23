@@ -1,0 +1,46 @@
+:root {
+  --primary: #4f46e5;
+  --primary-dark: #4338ca;
+  --danger: #ef4444;
+  --danger-dark: #dc2626;
+  --bg: #f3f4f6;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --lost: #fee2e2;
+  --found: #d1fae5;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background-color: var(--bg); color: var(--text); padding-bottom: 2rem; }
+
+.container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+.center-screen { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+
+.card { background: var(--surface); padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; width: 100%; max-width: 800px; }
+.card h2, .card h3 { margin-bottom: 20px; color: var(--text); }
+
+input, select, textarea { width: 100%; padding: 10px 15px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 6px; outline: none; }
+input:focus, select:focus, textarea:focus { border-color: var(--primary); }
+
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.form-grid input, .form-grid select { margin-bottom: 0; }
+.full-width { grid-column: 1 / -1; }
+
+.btn { padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; color: white; transition: 0.2s; }
+.btn-primary { background: var(--primary); }
+.btn-primary:hover { background: var(--primary-dark); }
+.btn-danger { background: var(--danger); }
+.btn-danger:hover { background: var(--danger-dark); }
+.btn-sm { padding: 5px 10px; font-size: 0.85rem; margin-right: 5px; }
+
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+.search-bar { width: 100%; padding: 15px; font-size: 1.1rem; margin-bottom: 20px; }
+
+.item-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+.item-card { padding: 20px; border-radius: 8px; border: 1px solid #e5e7eb; position: relative; }
+.item-card.lost { background-color: var(--lost); }
+.item-card.found { background-color: var(--found); }
+.item-card h4 { margin: 10px 0; font-size: 1.2rem; }
+.item-card p { margin-bottom: 8px; font-size: 0.95rem; }
+.item-badge { position: absolute; top: 15px; right: 15px; font-weight: bold; padding: 3px 8px; border-radius: 4px; background: rgba(0,0,0,0.1); }
+.actions { margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(0,0,0,0.1); }
